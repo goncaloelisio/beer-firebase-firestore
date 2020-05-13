@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Cloud Beers</h1>
+
+    <div class="content">
+
+        <form id="add-beer-form">
+            <input type="text" name="name" placeholder="Beer name">
+            <input type="text" name="brewery" placeholder="Brewery">
+            <input type="text" name="alcohol" placeholder="Alcohol">
+            <button id="btn">Add a Beer</button>
+        </form>
+
+        <ul id="beer-list"></ul>
+
+    </div>
+
+
+    <script>
+        // Web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: dummy,
+            authDomain: "beers-firestore.firebaseapp.com",
+            databaseURL: "https://beers-firestore.firebaseio.com",
+            projectId: "beers-firestore",
+            storageBucket: "beers-firestore.appspot.com",
+            messagingSenderId: "dummy",
+            appId: "dummy",
+            measurementId: "dummy"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
